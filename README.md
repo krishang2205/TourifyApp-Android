@@ -53,16 +53,11 @@ Secure authentication for personalized experiences. 🔐👤
 5. **Booking Confirmation**:  
    A confirmation page with the app’s logo marks the final step in the booking process. ✅🎉
 
-## 📸 **Screenshots**  
-📱 **Splash Screen**  
-📋 **Input Form**  
-🌟 **Tour Recommendations**  
-💳 **Billing Details**  
-✅ **Booking Confirmation**
+
 
 ## 💻 **Installation**
 
 Clone the repository and set up the app on your local machine:
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
+git clone https://github.com/krishang2205/TourifyApp-Android.git
