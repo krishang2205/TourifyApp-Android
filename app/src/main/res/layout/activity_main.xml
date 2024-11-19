@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:scrollbars="vertical"
+    android:background="@color/background_color">
+
+    <!-- Logo Image -->
+<ImageView
+android:id="@+id/logo"
+android:layout_width="303dp"
+android:layout_height="177dp"
+android:layout_gravity="center"
+android:layout_marginBottom="16dp"
+android:contentDescription="App Logo"
+android:src="@drawable/ic_logo" />
+
+    <!-- Fancy Line with Text Prompt -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:gravity="center"
+android:layout_marginBottom="24dp">
+
+<View
+    android:layout_width="0dp"
+    android:layout_height="1dp"
+    android:layout_weight="1"
+    android:background="@color/text_color" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Please enter your travel details"
+    android:textColor="@android:color/black"
+    android:textSize="16sp"
+    android:layout_marginHorizontal="8dp" />
+
+<View
+    android:layout_width="0dp"
+    android:layout_height="1dp"
+    android:layout_weight="1"
+    android:background="@android:color/darker_gray" />
+</LinearLayout>
+
+
+<TextView
+android:id="@+id/textView2"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:textSize="15sp"
+android:text="Select Destination:"
+android:fontFamily="sans-serif-medium"
+android:textColor="@android:color/black"/>
+
+
+<FrameLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginBottom="16dp"
+android:background="@drawable/border_background">
+
+<Spinner
+    android:id="@+id/destination_spinner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:textColor="@color/light_black"/>
+</FrameLayout>
+
+
+<TextView
+android:id="@+id/textView5"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:textSize="15sp"
+android:fontFamily="sans-serif-medium"
+android:textColor="@android:color/black"
+android:text="Select Dates:"/>
+
+    <LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:layout_marginBottom="16dp">
+
+
+<com.google.android.material.textfield.TextInputLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    app:hintTextColor="@color/light_black"
+    android:hint="Start Date">
+
+<com.google.android.material.textfield.TextInputEditText
+    android:id="@+id/start_date_input"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="none"
+    android:focusable="true"
+    android:clickable="true"
+    android:importantForAccessibility="yes"
+    android:contentDescription="Select Start Date"
+    android:onClick="showStartDatePicker" />
+</com.google.android.material.textfield.TextInputLayout>
+
+    <!-- End Date -->
+<com.google.android.material.textfield.TextInputLayout
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+app:hintTextColor="@color/light_black"
+    android:hint="End Date">
+
+<com.google.android.material.textfield.TextInputEditText
+android:id="@+id/end_date_input"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:inputType="none"
+android:focusable="true"
+android:clickable="true"
+android:importantForAccessibility="yes"
+android:contentDescription="Select End Date"
+android:onClick="showEndDatePicker" />
+    </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+<TextView
+android:id="@+id/textView6"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:fontFamily="sans-serif-medium"
+android:textSize="15sp"
+android:textColor="@android:color/black"
+android:text="Enter Your Budget:" />
+
+<com.google.android.material.textfield.TextInputLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginBottom="16dp"
+app:hintTextColor="@color/light_black"
+    android:hint="Enter your travel budget">
+
+<com.google.android.material.textfield.TextInputEditText
+android:id="@+id/budget_input"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:inputType="numberDecimal|numberSigned"
+android:importantForAccessibility="yes"
+android:contentDescription="Travel Budget" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+<TextView
+android:id="@+id/textView3"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Select Your Preference:"
+android:fontFamily="sans-serif-medium"
+android:textSize="15sp"
+android:textColor="@android:color/black"/>
+
+<FrameLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginBottom="16dp"
+android:background="@drawable/border_background">
+
+<Spinner
+    android:id="@+id/preferences_spinner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:textColor="@color/light_black" />
+</FrameLayout>
+
+    <Button
+        android:id="@+id/get_recommendations_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button_color"
+        android:text="Get Recommendations"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white" />
+
+    <ListView
+android:id="@+id/packagesListView"
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:layout_marginTop="16dp"
+android:visibility="gone"/>
+
+    </LinearLayout>

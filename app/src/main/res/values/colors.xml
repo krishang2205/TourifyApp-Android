@@ -1,0 +1,25 @@
+<resources>
+    <!-- Background Color -->
+    <color name="background_color">#F5F5F5</color>
+
+    <!-- Text Color -->
+    <color name="text_color">#212121</color>
+
+    <!-- Primary Button Color -->
+    <color name="primary_button_color">#AA22FF</color>
+
+    <!-- Secondary Button Color (Hover/Pressed) -->
+    <color name="secondary_button_color">#AA22FF</color>
+
+    <!-- Link Text Color -->
+    <color name="link_text_color">#039BE5</color>
+
+    <!-- Button Text Color -->
+    <color name="button_text_color">#FFFFFF</color>
+
+    <!-- Fresh Green Color for Accents -->
+    <color name="accent_green">#4CAF50</color>
+    <color name="primary_text_color">#333333</color>
+    <color name="button_color">#AA22FF</color>
+    <color name="light_black">#1E1E1E</color>
+</resources>

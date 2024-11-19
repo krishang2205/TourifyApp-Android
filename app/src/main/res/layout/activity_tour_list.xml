@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="6dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:strokeColor="@android:color/darker_gray"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Best Recommended Tours Title -->
+        <TextView
+            android:id="@+id/tv_best_recommended"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Best Recommended Tours"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+
+            android:paddingBottom="8dp" />
+
+        <!-- RecyclerView for Best Recommended Tours -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommendedToursRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp"
+            android:scrollbars="vertical" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginVertical="8dp" />
+
+        <!-- Other Tours Title -->
+        <TextView
+            android:id="@+id/tv_other_recommended"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Other Tours in Same Destination"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+
+        <!-- RecyclerView for Other Tours -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/otherToursRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
